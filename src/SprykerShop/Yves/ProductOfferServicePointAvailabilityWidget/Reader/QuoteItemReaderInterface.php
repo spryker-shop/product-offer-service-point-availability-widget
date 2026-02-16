@@ -10,9 +10,9 @@ namespace SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader;
 interface QuoteItemReaderInterface
 {
     /**
-     * @param list<string> $groupKeys
+     * @param array<string> $groupKeys
      *
-     * @return list<\Generated\Shared\Transfer\ItemTransfer>
+     * @return array<\Generated\Shared\Transfer\ItemTransfer>
      */
     public function getItemsFromQuote(array $groupKeys): array;
 }
