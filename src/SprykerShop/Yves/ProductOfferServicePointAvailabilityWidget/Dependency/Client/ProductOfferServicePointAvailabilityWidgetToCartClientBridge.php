@@ -24,9 +24,6 @@ class ProductOfferServicePointAvailabilityWidgetToCartClientBridge implements Pr
         $this->cartClient = $cartClient;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function getQuote(): QuoteTransfer
     {
         return $this->cartClient->getQuote();

@@ -35,21 +35,11 @@ class ProductOfferServicePointAvailabilityWidgetYvesTester extends Actor
 {
     use _generated\ProductOfferServicePointAvailabilityWidgetYvesTesterActions;
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function createQuoteTransfer(array $seed = []): QuoteTransfer
     {
         return (new QuoteBuilder($seed))->build();
     }
 
-    /**
-     * @param bool $isAvailable
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer
-     */
     public function createProductOfferServicePointAvailabilityResponseItemTransfer(
         bool $isAvailable
     ): ProductOfferServicePointAvailabilityResponseItemTransfer {

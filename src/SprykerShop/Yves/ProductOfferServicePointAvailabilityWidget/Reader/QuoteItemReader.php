@@ -17,9 +17,6 @@ class QuoteItemReader implements QuoteItemReaderInterface
      */
     protected ProductOfferServicePointAvailabilityWidgetToCartClientInterface $cartClient;
 
-    /**
-     * @param \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Dependency\Client\ProductOfferServicePointAvailabilityWidgetToCartClientInterface $cartClient
-     */
     public function __construct(
         ProductOfferServicePointAvailabilityWidgetToCartClientInterface $cartClient
     ) {

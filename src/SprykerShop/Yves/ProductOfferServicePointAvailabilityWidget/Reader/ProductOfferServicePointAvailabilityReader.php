@@ -31,11 +31,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
      */
     protected ProductOfferServicePointAvailabilityWidgetToProductOfferServicePointAvailabilityCalculatorStorageClientInterface $productOfferServicePointAvailabilityCalculatorStorageClient;
 
-    /**
-     * @param \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\QuoteItemReaderInterface $quoteItemReader
-     * @param \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Builder\ServicePointAvailabilityMessageBuilderInterface $servicePointAvailabilityMessageBuilder
-     * @param \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Dependency\Client\ProductOfferServicePointAvailabilityWidgetToProductOfferServicePointAvailabilityCalculatorStorageClientInterface $productOfferServicePointAvailabilityCalculatorStorageClient
-     */
     public function __construct(
         QuoteItemReaderInterface $quoteItemReader,
         ServicePointAvailabilityMessageBuilderInterface $servicePointAvailabilityMessageBuilder,

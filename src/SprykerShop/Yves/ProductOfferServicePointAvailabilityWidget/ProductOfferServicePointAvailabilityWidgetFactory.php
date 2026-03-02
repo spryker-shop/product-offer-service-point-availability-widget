@@ -19,9 +19,6 @@ use SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\QuoteItem
 
 class ProductOfferServicePointAvailabilityWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\ProductOfferServicePointAvailabilityReaderInterface
-     */
     public function createProductOfferServicePointAvailabilityReader(): ProductOfferServicePointAvailabilityReaderInterface
     {
         return new ProductOfferServicePointAvailabilityReader(
@@ -31,9 +28,6 @@ class ProductOfferServicePointAvailabilityWidgetFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\QuoteItemReaderInterface
-     */
     public function createQuoteItemReader(): QuoteItemReaderInterface
     {
         return new QuoteItemReader(
@@ -41,25 +35,16 @@ class ProductOfferServicePointAvailabilityWidgetFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Builder\ServicePointAvailabilityMessageBuilderInterface
-     */
     public function createServicePointAvailabilityMessageBuilder(): ServicePointAvailabilityMessageBuilderInterface
     {
         return new ServicePointAvailabilityMessageBuilder();
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Dependency\Client\ProductOfferServicePointAvailabilityWidgetToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
-     */
     public function getProductOfferServicePointAvailabilityCalculatorStorageClient(): ProductOfferServicePointAvailabilityWidgetToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointAvailabilityWidgetDependencyProvider::CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Dependency\Client\ProductOfferServicePointAvailabilityWidgetToCartClientInterface
-     */
     public function getCartClient(): ProductOfferServicePointAvailabilityWidgetToCartClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointAvailabilityWidgetDependencyProvider::CLIENT_CART);

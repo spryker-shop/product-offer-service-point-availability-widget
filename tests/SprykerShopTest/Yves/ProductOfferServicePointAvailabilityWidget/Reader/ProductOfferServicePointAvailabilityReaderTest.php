@@ -105,9 +105,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         $this->assertSame($expectedAvailabilityMessage, $productOfferServicePointAvailabilities[$servicePointSearchTransfer->getUuidOrFail()]);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsDifferentAvailabilitiesPerSeveralServicePoints(): void
     {
         // Arrange
@@ -154,9 +151,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_SOME_ITEMS_NOT_AVAILABLE, $productOfferServicePointAvailabilities[$thirdServicePointSearchTransfer->getUuidOrFail()]);
     }
 
-    /**
-     * @return void
-     */
     public function testFiltersCartItemsWhenGroupKeysAreProvided(): void
     {
         // Arrange, Assert
@@ -169,9 +163,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testUsesAllCartItemsWhenGroupKeysAreProvided(): void
     {
         // Arrange, Assert
@@ -184,9 +175,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testRecognizesItemsWithoutProductOfferReferenceAsNotAvailable(): void
     {
         // Arrange
@@ -220,9 +208,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         $this->assertSame(static::GLOSSARY_KEY_SOME_ITEMS_NOT_AVAILABLE, $productOfferServicePointAvailabilities[$servicePointSearchTransfer->getUuidOrFail()]);
     }
 
-    /**
-     * @return array
-     */
     protected function availabilityMessagesDataProvider(): array
     {
         return [
@@ -249,11 +234,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         );
     }
 
-    /**
-     * @param bool $extractItemsFromQuoteByGroupKeysMethodShouldBeCalled
-     *
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\ProductOfferServicePointAvailabilityReaderInterface
-     */
     protected function createProductOfferServicePointAvailabilityReaderWithMockedQuoteItemReader(
         bool $extractItemsFromQuoteByGroupKeysMethodShouldBeCalled
     ): ProductOfferServicePointAvailabilityReaderInterface {
@@ -285,11 +265,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         return $productOfferServicePointAvailabilityReaderMock;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Reader\QuoteItemReaderInterface
-     */
     protected function createQuoteItemReader(QuoteTransfer $quoteTransfer): QuoteItemReaderInterface
     {
         return new QuoteItemReader(
@@ -297,9 +272,6 @@ class ProductOfferServicePointAvailabilityReaderTest extends Unit
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Builder\ServicePointAvailabilityMessageBuilderInterface
-     */
     protected function createServicePointAvailabilityMessageBuilder(): ServicePointAvailabilityMessageBuilderInterface
     {
         return new ServicePointAvailabilityMessageBuilder();

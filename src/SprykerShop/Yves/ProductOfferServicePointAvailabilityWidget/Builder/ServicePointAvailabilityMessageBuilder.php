@@ -131,12 +131,6 @@ class ServicePointAvailabilityMessageBuilder implements ServicePointAvailability
         return $availabilityPerServicePoint;
     }
 
-    /**
-     * @param bool $hasAvailable
-     * @param bool $hasNotAvailable
-     *
-     * @return string
-     */
     protected function getAvailabilityMessageForSingleServicePoint(
         bool $hasAvailable,
         bool $hasNotAvailable

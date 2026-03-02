@@ -24,11 +24,6 @@ class ProductOfferServicePointAvailabilityWidgetDependencyProvider extends Abstr
      */
     public const CLIENT_CART = 'CLIENT_CART';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -39,11 +34,6 @@ class ProductOfferServicePointAvailabilityWidgetDependencyProvider extends Abstr
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addProductOfferServicePointAvailabilityCalculatorStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE, function (Container $container) {
@@ -55,11 +45,6 @@ class ProductOfferServicePointAvailabilityWidgetDependencyProvider extends Abstr
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCartClient(Container $container): Container
     {
         $container->set(static::CLIENT_CART, function (Container $container) {

@@ -21,9 +21,6 @@ class ProductOfferServicePointAvailabilityDisplayWidget extends AbstractWidget
      */
     protected const PARAMETER_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_MESSAGE = 'productOfferServicePointAvailabilityMessage';
 
-    /**
-     * @param string $productOfferServicePointAvailabilityMessage
-     */
     public function __construct(string $productOfferServicePointAvailabilityMessage)
     {
         $this->addProductOfferServicePointAvailabilityMessageParameter($productOfferServicePointAvailabilityMessage);
@@ -53,11 +50,6 @@ class ProductOfferServicePointAvailabilityDisplayWidget extends AbstractWidget
         return '@ProductOfferServicePointAvailabilityWidget/views/availability-display/availability-display.twig';
     }
 
-    /**
-     * @param string $productOfferServicePointAvailabilityMessage
-     *
-     * @return void
-     */
     protected function addProductOfferServicePointAvailabilityMessageParameter(string $productOfferServicePointAvailabilityMessage): void
     {
         $this->addParameter(static::PARAMETER_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_MESSAGE, $productOfferServicePointAvailabilityMessage);
